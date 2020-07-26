@@ -1,6 +1,8 @@
 # handwashing-analysis
 An EDA of the history of handwashing in Jupyter Notebook
 
+This EDA is inspired by Rasmus Bååth's tutorial project on DataCamp.
+
 With the Covid-19 pandemic ravaging the planet, governments have been reminding the general public to wash their hands, don't touch their face, wear a facemask, and stay at home. It is only natural for one to be curious and have a think about when did handwashing became a thing, and who discovered its importance. In this EDA, we will dive right into data that was at the disposal of Dr. Ignaz Semmelweis, the person who highlighted the gravity of handwashing (spoiler alert: he was not appreciated!).
 
 In this exploration, we are able to answer questions like:
