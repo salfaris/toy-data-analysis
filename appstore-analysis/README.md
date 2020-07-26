@@ -5,6 +5,8 @@ Everyone uses mobile apps nowadays - from video games to task managers. As techn
 
 The project is an exploratory data analysis of the App Store, Apple's app market using a modified dataset `AppleStoreData.csv` retrieved from Kaggle which contains details of approximately 7000 number of apps.
 
+<img src="https://github.com/salfaris/data-analysis/blob/master/appstore-analysis/barplot.png" alt="image" width="550" height="500">
+
 In this exploration, I have utilized the `pandas`, `matplotplib`, `plotly` and `seaborn` libraries in Python 3 to make a comprehensive analysis of the dataset. As seen in the notebook, I was able to answer questions like:
 
 - Is there any linear correlation between say user ratings and app price?
