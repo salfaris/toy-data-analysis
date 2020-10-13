@@ -24,7 +24,15 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-def timeseries_plot(ax, x, y, xlabel, ylabel, color = 'black', linestyle = 'solid', alpha = 1, color_ticks = True):
+def timeseries_plot(ax,
+                    x,
+                    y,
+                    xlabel,
+                    ylabel,
+                    color = 'black',
+                    linestyle = 'solid',
+                    alpha = 1,
+                    color_ticks = True):
     '''Plots a timeseries.
     
     Args: 
