@@ -24,19 +24,29 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-def timeseries_plot(ax, x, y, xlabel, ylabel, color = 'black', linestyle = 'solid', alpha = 1, color_ticks = True):
-    '''Plots a timeseries
+def timeseries_plot(ax,
+                    x,
+                    y,
+                    xlabel,
+                    ylabel,
+                    color = 'black',
+                    linestyle = 'solid',
+                    alpha = 1,
+                    color_ticks = True):
+    '''Plots a timeseries.
     
     Args: 
         ax (axes): The axes to be plotted onto
-        x (pandas Series): Dependent variable of plot (expected a DatetimeIndex)
+        x (pandas Series): Dependent variable of plot 
+            (expected a DatetimeIndex)
         y (pandas Series): Independent variable of plot
         xlabel (str): X label
         ylabel (str): Y label
         color (str, optional): Color of plot
         linestyle (str, optional): Linestyle of plot
         alpha (float, optional): Transparency of plot
-        color_ticks (boolean, optional): If True, colors ylabel and ticks with color
+        color_ticks (boolean, optional): If True, colors ylabel and ticks
+            with color
 
     Returns:
         Plots y versus x as lines
@@ -51,28 +61,33 @@ def timeseries_plot(ax, x, y, xlabel, ylabel, color = 'black', linestyle = 'soli
         ax.set_ylabel(ylabel)
 
 def func_diff_bootstrap_replicate(pre_series, post_series, func=np.mean):
-    '''Generates bootstrap replicate of the difference in func applied to two pre-post pandas Series
+    '''Generates bootstrap replicate of the difference in func applied
+     to two pre-post pandas Series.
     
     Args:
         pre_series (pandas Series): Pre-Series to be replicated
         post_series (pandas Series): Post-Series to be replicated
-        func (numpy function, optional): Statistic of interest (mean, median, std, var)
+        func (numpy function, optional): Statistic of interest
+            (mean, median, std, var)
 
     Returns:
-        float: Difference between func applied to replicated Post-Series and func applied to replicated Pre-Series
+        float: Difference between func applied to replicated Post-Series
+            and func applied to replicated Pre-Series
     '''
     pre_replicate =  pre_series.sample(frac=1, replace=True)
     post_replicate = post_series.sample(frac=1, replace=True)
     func_diff = func(post_replicate) - func(pre_replicate)
     return func_diff
 
-def conf_int(lst, conf=90, result='series'):
-    '''Computes the confidence interval from a list and returns a pandas Series or a numpy array
+def conf_interval(lst, conf=90, result='series'):
+    '''Computes the confidence interval from a list and returns a
+     pandas Series or a numpy array.
     
     Args:
         lst (list): Sample data to compute confidence interval on
         conf (float, optional): conf% confidence interval
-        result (str, optional): Returns confidence interval in the form of result (Series/array)
+        result (str, optional): Returns confidence interval in the 
+            form of result (Series/array)
     
     Returns:
         pandas Series: If result='series' (default)
