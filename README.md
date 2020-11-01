@@ -1,7 +1,7 @@
 # data-analysis
 Data Analysis Mini Projects
 
-These are data analysis mini personal projects that I have executed based on tutorials on DataCamp.
+These are data analysis mini personal projects that I have executed based on tutorials.
 
 1. Apple App Store Analysis
 2. Handwashing Analysis
