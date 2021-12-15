@@ -5,7 +5,6 @@ import pandas as pd
 url = 'https://www.ox.ac.uk/admissions/undergraduate/colleges/do-I-pay-to-live-in-my-college'
 page = requests.get(url)
 soup = BeautifulSoup(page.text, 'lxml')
-soup.title
 
 # Find table.
 table = soup.find('table', {'class': 'table-striping'})
